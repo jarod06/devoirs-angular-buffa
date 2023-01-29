@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './main/main.component.html',
+  styleUrls: ['./main/main.component.css']
 })
 export class AppComponent {
   title = 'devoirs-angular-buffa';
