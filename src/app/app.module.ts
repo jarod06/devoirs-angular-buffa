@@ -14,6 +14,8 @@ import { DevoirService } from './devoirs.service'
 
 import { HttpClientModule } from '@angular/common/http'
 
+import { ErrorInterceptorProvider } from './http.interceptor'
+
 const appRoutes: Routes = [
 	{ path: '', component: MainComponent },
 	{ path: 'main', component: MainComponent },
@@ -38,7 +40,7 @@ const appRoutes: Routes = [
 		AlertModule.forRoot(),
 		HttpClientModule
 		],
-	providers: [DevoirService],
+	providers: [DevoirService, ErrorInterceptorProvider],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

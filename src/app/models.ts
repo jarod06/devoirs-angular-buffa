@@ -3,5 +3,5 @@ export class Devoir {
 }
 
 export class ResponseResult {
-	constructor(public status: number, public message: string) {}
+	constructor(public statusCode: number, public message: string) {}
 }

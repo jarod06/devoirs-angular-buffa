@@ -1,1 +1,28 @@
-<p>devoirslist works!</p>
+<div class="container">
+	<h2>Devoirs</h2>
+	<div *ngIf="status || errmsg">
+		<alert *ngIf="status != 200" type="danger"></alert>
+		<alert *ngIf="status === 200" type="success">Le devoir a bien été supprimé!</alert>
+	</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<!-- constructor(public _id: number, public name: string, public classe: string) {} -->
+				<th>ID</th>
+				<th>Nom du devoir</th>
+				<th>Classe</th>				
+			</tr>
+		</thead>
+		<tbody *ngFor="let devoir of devoirs">
+			<tr>
+				<td></td>
+				<td></td>
+				<td><span></span></td>
+				<td>
+					<button type="button" class="btn btn-success" [routerLink]="['/devoirsadd', devoir._id ]">Edit</button>
+					<button type="button" class="btn btn-danger" (click)="deleteDevoir({ event:$event, id: devoir._id })">Supprimer</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
