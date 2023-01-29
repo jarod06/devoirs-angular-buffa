@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component'
 import { DevoirsaddComponent } from './devoirsadd/devoirsadd.component'
 import { DevoirslistComponent } from './devoirslist/devoirslist.component'
 
+import { AlertModule } from 'ngx-bootstrap/alert'
+
 const appRoutes: Routes = [
 	{ path: '', component: MainComponent },
 	{ path: 'main', component: MainComponent },
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
 		],
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot(appRoutes)
+		RouterModule.forRoot(appRoutes),
+		AlertModule.forRoot()
 		],
 	providers: [],
 	bootstrap: [AppComponent]
