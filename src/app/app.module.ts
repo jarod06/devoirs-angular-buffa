@@ -10,6 +10,9 @@ import { DevoirsaddComponent } from './devoirsadd/devoirsadd.component'
 import { DevoirslistComponent } from './devoirslist/devoirslist.component'
 
 import { AlertModule } from 'ngx-bootstrap/alert'
+import { DevoirService } from './devoirs.service'
+
+import { HttpClientModule } from '@angular/common/http'
 
 const appRoutes: Routes = [
 	{ path: '', component: MainComponent },
@@ -32,9 +35,10 @@ const appRoutes: Routes = [
 	imports: [
 		BrowserModule,
 		RouterModule.forRoot(appRoutes),
-		AlertModule.forRoot()
+		AlertModule.forRoot(),
+		HttpClientModule
 		],
-	providers: [],
+	providers: [DevoirService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
